@@ -1,0 +1,14 @@
+rolls = []
+for _ in range(num_dice):
+    roll = random.randint(1, 6)
+    rolls.append(roll)
+
+print("Dice rolls:", rolls)
+
+roll_again = input("Do you want to roll the dice again? (y/n): ")
+while roll_again.lower() not in ['y', 'n']:
+    print("Please enter 'y' to roll again or 'n' to quit.")
+    roll_again = input("Do you want to roll the dice again? (y/n): ")
+
+if roll_again.lower() == 'y':
+    roll_dice()
